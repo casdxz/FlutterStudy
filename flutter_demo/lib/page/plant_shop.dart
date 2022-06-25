@@ -67,7 +67,6 @@ class PlantShop extends StatelessWidget {
           ],
         ),
     ),
-
       bottomNavigationBar: BottomAppBar(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -321,13 +320,13 @@ class FeaturedPlants extends StatelessWidget {
         children: const <Widget>[
           // 调⽤封装的⾃定义组件，传⼊图⽚地址
           FeaturePlantCard(
-            image: "images/plant1.jpg",
+            image: "images/botany01.jpg",
           ),
           FeaturePlantCard(
-            image: "images/plant2.jpg",
+            image: "images/botany02.jpg",
           ),
           FeaturePlantCard(
-            image: "images/plant3.jpg",
+            image: "images/botany03.jpg",
           ),
         ],
       ),
