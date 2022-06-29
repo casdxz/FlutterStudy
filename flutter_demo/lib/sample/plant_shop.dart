@@ -1,78 +1,43 @@
 import 'package:flutter/material.dart';
 
-
+// 植物小店
 class PlantShop extends StatelessWidget {
   const PlantShop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // banner中的字体样式
-    const style = TextStyle(
-      color: Colors.white,
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-    );
-    // 构建脚手架，包含顶部appBar和body
+     // 构建脚⼿架，包含顶部appBar和body
     return Scaffold(
       appBar: _buildAppBar(context),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: <Widget>[
-            // ⻉塞尔弧形部分
-            ClipPath(
-              // 裁剪，使⽤⾃定义的类构建⻉塞尔弧形
-              clipper: BottomClipper(),
-              child: Container(
-                // 通过内边距让⽂字上移
-                padding: const EdgeInsets.only(
-                  bottom: 50.0,
-                ),
-                // 和appBar背景⾊保持⼀致，融为⼀体
-                color: const Color(0xFF0C9869),
-                height: 200,
-                child: Column(
-                  children: [
-                    Row(
-                      // 主轴和交叉轴的对⻬⽅式
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: const <Widget>[
-                      // Row布局，左⽂右图
-                      Text(
-                        'Hi ⼩⿅扫描！',
-                        style: style,
-                      ),
-                      SizedBox(
-                        width: 80,
-                        height: 80,
-                        child: CircleAvatar(
-                          radius: 50,
-                          backgroundImage: NetworkImage(
-                            'https://cdn.jsdelivr.net/gh/casdxz/image@master/head/share.webp',
-                          ),
-                        ),
-                      ),
-                    ]
-                  ),
-                // const SizedBox(
-                // height: 30.0,
-                // ),
-                ],
-              )),
-            ),
-
-            // Body类构建下⾯的热⻔推荐和特⾊植物
-            const Body(),
-          ],
-        ),
-    ),
+      body: Stack(
+        children: <Widget>[
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: _buildHeader(),
+          ),
+          Positioned(
+            top: 130,
+            left: 20,
+            right: 20,
+            child: _buildSearch(),
+          ),
+          Positioned(
+            top: 200,
+            left: 0,
+            right: 0,
+            height: MediaQuery.of(context).size.height - 200,
+            child: const Body(),
+          ),
+        ],
+      ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              icon: const Icon(Icons.local_florist),
+              icon: const Icon(Icons.ac_unit),
               onPressed: () {},
             ),
             IconButton(
@@ -89,41 +54,99 @@ class PlantShop extends StatelessWidget {
     );
   }
 
+  // 构建顶部Header
+  Container _buildHeader() {
+     // banner中的字体样式
+    const style = TextStyle(
+      color: Colors.white,
+      fontSize: 32,
+      fontWeight: FontWeight.bold,
+    );
+    return Container(
+      padding: const EdgeInsets.only(
+        bottom: 50,
+      ),
+      height: 160,
+      decoration: const BoxDecoration(
+        color: const Color(0xFF0C9869),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(40),
+          bottomRight: Radius.circular(40),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: const <Widget>[
+          Text(
+            'Hi ⼩⿅扫描！',
+            style: style,
+          ),
+          SizedBox(
+            width: 80,
+            height: 80,
+            child: CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage(
+                'images/share.jpg',
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+//   构建搜索区
+  Container _buildSearch() {
+    return Container(
+      height: 60,
+      alignment: Alignment.centerLeft,
+      padding: const EdgeInsets.only(left: 20.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(width: 1.0, color: const Color(0xFF0C9869)),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(20),
+        ),
+      ),
+      child: const TextField(
+        autofocus: true,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none,
+          ),
+          prefixIcon: Icon(
+            Icons.search,
+            color: const Color(0xFF0C9869),
+          ),
+           // labelText: '搜索',
+          hintText: 'Search',
+          hintStyle: TextStyle(
+            fontSize: 20,
+            color: const Color(0xFF0C9869),
+          ),
+        ),
+      ),
+    );
+  }
+
   // 构建顶部appBar的私有⽅法
   AppBar _buildAppBar(context) {
     return AppBar(
       elevation: 0,
       backgroundColor: const Color(0xFF0C9869),
       actions: const [
-        Icon(
-          Icons.code,
-          color: Colors.white,
+        Padding(
+          padding: EdgeInsets.only(right: 12.0),
+          child: Icon(
+            Icons.code,
+            color: Colors.white,
+          ),
         ),
       ],
       // leading:
     );
-  }
-}
-
-// ⾃定义裁剪路径，通过⻉塞尔曲线构建弧形
-class BottomClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    var path = Path();
-    path.lineTo(0, 0); //第⼀个点
-    path.lineTo(0, size.height - 60); //第⼆个点
-    var firstControlPoint = Offset(size.width / 2, size.height); //曲线开始点
-    var firstEndPoint = Offset(size.width, size.height - 60); // 曲线结束点
-    path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
-        firstEndPoint.dx, firstEndPoint.dy);
-    path.lineTo(size.width, size.height - 60); //第四个点
-    path.lineTo(size.width, 0); // 第五个点
-    return path;
-  }
-
-  @override
-  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-    return false;
   }
 }
 
@@ -162,7 +185,7 @@ class Body extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     primary: const Color(0xFF0C9869),
                   ),
-                  child: const Text('查看更多'),
+                  child: const Text('更多'),
                 ),
               ],
             ),
@@ -183,7 +206,7 @@ class Body extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     primary: const Color(0xFF0C9869),
                   ),
-                  child: const Text('查看更多'),
+                  child: const Text('更多'),
                 ),
               ],
             ),
@@ -195,8 +218,8 @@ class Body extends StatelessWidget {
     );
   }
 }
-//构建热⻔推荐
 
+//构建热⻔推荐
 class RecommendsPlants extends StatelessWidget {
   const RecommendsPlants({Key? key}) : super(key: key);
 
@@ -209,19 +232,19 @@ class RecommendsPlants extends StatelessWidget {
         children: const <Widget>[
           // 调⽤封装的⾃定义组件，传⼊参数值
           RecommendPlantCard(
-            image: 'images/banner.jpg',
+            image: 'images/kaffirLily.jpeg',
             title: '君⼦兰',
             country: '中国',
             price: 440,
           ),
           RecommendPlantCard(
-            image: "images/banner.jpg",
+            image: "images/angelica.jpeg",
             title: '当归',
             country: '中国',
             price: 440,
           ),
           RecommendPlantCard(
-            image: "images/banner.jpg",
+            image: "images/rose.jpeg",
             title: '萨曼沙',
             country: '俄罗斯',
             price: 440,
@@ -232,9 +255,9 @@ class RecommendsPlants extends StatelessWidget {
   }
 }
 
+//封装热门推荐卡片
 class RecommendPlantCard extends StatelessWidget {
   //ignore: use_key_in_widget_constructors
-
   const RecommendPlantCard({
     required this.image,
     required this.title,
@@ -307,7 +330,6 @@ class RecommendPlantCard extends StatelessWidget {
 }
 
 // 构建特⾊植物区域
-
 class FeaturedPlants extends StatelessWidget {
   const FeaturedPlants({Key? key}) : super(key: key);
 
@@ -320,13 +342,13 @@ class FeaturedPlants extends StatelessWidget {
         children: const <Widget>[
           // 调⽤封装的⾃定义组件，传⼊图⽚地址
           FeaturePlantCard(
-            image: "images/botany01.jpg",
+            image: "images/botany01.jpeg",
           ),
           FeaturePlantCard(
-            image: "images/botany02.jpg",
+            image: "images/botany02.jpeg",
           ),
           FeaturePlantCard(
-            image: "images/botany03.jpg",
+            image: "images/botany03.png",
           ),
         ],
       ),
