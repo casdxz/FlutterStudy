@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/common/data.dart';
+import 'package:flutter_demo/common/style.dart';
 
-var data = [
-  Colors.purple[50],
-  Colors.purple[100],
-  Colors.purple[200],
-  Colors.purple[300],
-  Colors.purple[400],
-  Colors.purple[500],
-  Colors.purple[600],
-  Colors.purple[700],
-  Colors.purple[800],
-  Colors.purple[900],
-];
+// var data = [
+//   Colors.purple[50],
+//   Colors.purple[100],
+//   Colors.purple[200],
+//   Colors.purple[300],
+//   Colors.purple[400],
+//   Colors.purple[500],
+//   Colors.purple[600],
+//   Colors.purple[700],
+//   Colors.purple[800],
+//   Colors.purple[900],
+// ];
 
 class ListViewWidget extends StatelessWidget {
   const ListViewWidget({Key? key}) : super(key: key);
@@ -30,10 +32,11 @@ class ListViewWidget extends StatelessWidget {
             children: <Widget>[
               const Text(
                 '列表组件',
-                style: TextStyle(
-                  fontSize: 22,
-                  color: Colors.purpleAccent,
-                ),
+                style: titleStyle,
+                // style: TextStyle(
+                //   fontSize: 22,
+                //   color: Colors.purpleAccent,
+                // ),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(
@@ -52,11 +55,12 @@ class ListViewWidget extends StatelessWidget {
                 ),
                 child: const Text(
                   'ListView.separated构造',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: subTitleStyle,
+                  // style: TextStyle(
+                  //   fontSize: 20,
+                  //   color: Colors.black87,
+                  //   fontWeight: FontWeight.bold,
+                  // ),
                 ),
               ),
               SizedBox(
@@ -77,11 +81,12 @@ class ListViewWidget extends StatelessWidget {
                 ),
                 child: const Text(
                   'ListView基本使用',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: subTitleStyle,
+                  // style: TextStyle(
+                  //   fontSize: 20,
+                  //   color: Colors.black87,
+                  //   fontWeight: FontWeight.bold,
+                  // ),
                 ),
               ),
               SizedBox(
@@ -100,11 +105,12 @@ class ListViewWidget extends StatelessWidget {
                 ),
                 child: const Text(
                   'ListView.builder构造',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: subTitleStyle,
+                  // style: TextStyle(
+                  //   fontSize: 20,
+                  //   color: Colors.black87,
+                  //   fontWeight: FontWeight.bold,
+                  // ),
                 ),
               ),
               SizedBox(
@@ -121,8 +127,8 @@ class ListViewWidget extends StatelessWidget {
     );
   }
 
-  String colorString(dynamic color) =>
-      "#${color.value.toRadixString(16).padLeft(8, '0').toUpperCase()}";
+  // String colorString(dynamic color) =>
+  //     "#${color.value.toRadixString(16).padLeft(8, '0').toUpperCase()}";
 
   Widget _buildItem(dynamic color) => Container(
     alignment: Alignment.center,
@@ -130,13 +136,14 @@ class ListViewWidget extends StatelessWidget {
     color: color,
     child: Text(
       colorString(color),
-      style: const TextStyle(color: Colors.white, shadows: [
-        Shadow(
-          color: Colors.black,
-          offset: Offset(.5, .5),
-          blurRadius: 2,
-        ),
-      ]),
+      style: shadowStyle,
+      // style: const TextStyle(color: Colors.white, shadows: [
+      //   Shadow(
+      //     color: Colors.black,
+      //     offset: Offset(.5, .5),
+      //     blurRadius: 2,
+      //   ),
+      // ]),
     ),
   );
 }

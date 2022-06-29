@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/common/style.dart';
 
 class ContainerWidget extends StatelessWidget {
   const ContainerWidget({Key? key}) : super(key: key);
@@ -18,10 +19,11 @@ class ContainerWidget extends StatelessWidget {
           children: [
             const Text(
               '容器组件',
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.purpleAccent,
-              ),
+              style:titleStyle
+              // style: TextStyle(
+              //   fontSize: 22,
+              //   color: Colors.purpleAccent,
+              // ),
             ),
             Container(
               margin: const EdgeInsets.symmetric(
@@ -30,9 +32,11 @@ class ContainerWidget extends StatelessWidget {
               child: const Text(
                   '用于容纳单个子组件的容器组件。集成了若干个单子组件的功能，'
                       '如内外边距、形变、装饰、约束等。',
-                  style: TextStyle(
-                    fontSize: 18,
-                  )),
+                  style: descStyle,
+                  // style: TextStyle(
+                  //   fontSize: 18,
+                  // )
+                ),
             ),
             Container(
               margin: const EdgeInsets.all(20.0),

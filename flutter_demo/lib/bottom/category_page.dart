@@ -40,8 +40,10 @@ class _CategoryPageState extends State with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // foregroundColor: Colors.black87,
+        // backgroundColor: Colors.white,
         title: const Text('分类'),
-        backgroundColor: Colors.indigo,
+        // backgroundColor: Colors.indigo,
         centerTitle: true,
         actions: const <Widget>[
           Icon(Icons.settings),
@@ -56,6 +58,7 @@ class _CategoryPageState extends State with SingleTickerProviderStateMixin {
     isScrollable: true,
     controller: _tabController,
     indicatorColor: Colors.orangeAccent,
+    // labelColor: Colors.black87,
     tabs: tabs.map((e) => Tab(text: e)).toList(),
   );
 
