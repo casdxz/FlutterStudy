@@ -42,9 +42,7 @@ class UserAccountDrawerHeaderWidget extends StatelessWidget {
           CircleAvatar(
             backgroundColor: Colors.yellow,
           ),
-          CircleAvatar(
-            backgroundColor: Colors.yellow,
-          ),
+
         ],
         onDetailsPressed: () {},
         arrowColor: Colors.white,
