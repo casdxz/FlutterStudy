@@ -6,6 +6,9 @@ import 'package:flutter_demo/widget/stateful/image_widget.dart';
 import 'package:flutter_demo/widget/stateful/pageviewcontrol.dart';
 import 'package:flutter_demo/widget/stateful/sliverappbar_widget.dart';
 import 'package:flutter_demo/widget/stateless/CheckboxListTile.dart';
+import 'package:flutter_demo/widget/stateless/aboutdialog.dart';
+import 'package:flutter_demo/widget/stateless/daypicker.dart';
+import 'package:flutter_demo/widget/stateless/dialog.dart';
 import 'package:flutter_demo/widget/stateless/aboutlisttile.dart';
 import 'package:flutter_demo/widget/stateless/actionchip_widget.dart';
 import 'package:flutter_demo/widget/stateless/alertDialog.dart';
@@ -22,8 +25,13 @@ import 'package:flutter_demo/widget/stateless/gridview_widget.dart';
 import 'package:flutter_demo/widget/stateless/inputchip_widget.dart';
 import 'package:flutter_demo/widget/stateless/listtile_widget.dart';
 import 'package:flutter_demo/widget/stateless/listview_widget.dart';
+import 'package:flutter_demo/widget/stateless/materialbanner.dart';
+import 'package:flutter_demo/widget/stateless/navigationtoolbar.dart';
 import 'package:flutter_demo/widget/stateless/pageview_widget.dart';
+import 'package:flutter_demo/widget/stateless/placeholder.dart';
 import 'package:flutter_demo/widget/stateless/radiolisttile.dart';
+import 'package:flutter_demo/widget/stateless/safearea.dart';
+import 'package:flutter_demo/widget/stateless/simpledialog.dart';
 import 'package:flutter_demo/widget/stateless/singlechildscrollview_widget.dart';
 import 'package:flutter_demo/widget/stateless/space.dart';
 import 'package:flutter_demo/widget/stateless/switchlisttile.dart';
@@ -62,6 +70,14 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/aboutlisttile': (context) => const AboutListTileWidget(),
   '/spacer': (context) => const SpacerWidget(),
   '/alertdialog': (context) => const AlertDialogWidget(),
+  '/dialog': (context) => const DialogWidget(),
+  '/aboutdialog': (context) => const AboutDialogWidget(),
+  '/simpledialog': (context) => const SimpleDialogWidget(),
+  '/daypicker': (context) => const DayPickerWidget(),
+  '/safearea': (context) => const SafeAreaWidget(),
+  '/materialbanner': (context) => const MaterialBannerWidget(),
+  '/navigationtoolbar': (context) => const NavigationToolbarWidget(),
+  '/placeholder': (context) => const PlaceholderWidget(),
 
   // 有状态组件导航
   '/image': (context) => const ImageWidget(),
