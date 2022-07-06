@@ -73,6 +73,11 @@ final statelessList = <ContainerInfo>[
   ContainerInfo('MaterialBannerWidget', 'Material风格的横幅组件，支持左中右或左中下结构、可指定边距背景色等。', '/materialbanner'),
   ContainerInfo('NavigationToolbarWidget', '左中右模式的通用结构组件，可指定中间组件距左侧边距及是否居中。源码在AppBar等导航条结构中有使用它。', '/navigationtoolbar'),
   ContainerInfo('PlaceholderWidget', '一个矩形和叉叉的占位组件，可指定颜色、线宽、宽高等属性。', '/placeholder'),
+  ContainerInfo('IconWidget', '一个矩形和叉叉的占位组件，可指定颜色、线宽、宽高等属性。', '/icon'),
+  ContainerInfo('DividerWidget', '一个矩形和叉叉的占位组件，可指定颜色、线宽、宽高等属性。', '/divider'),
+  ContainerInfo('CupertionWidget', '一个矩形和叉叉的占位组件，可指定颜色、线宽、宽高等属性。', '/cupertion'),
+  ContainerInfo('MyPreferredSizeWidget', '一个矩形和叉叉的占位组件，可指定颜色、线宽、宽高等属性。', '/mypreferredsize'),
+
 ];
 
 final statefulList = <ContainerInfo>[

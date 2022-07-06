@@ -7,6 +7,7 @@ import 'package:flutter_demo/widget/stateful/pageviewcontrol.dart';
 import 'package:flutter_demo/widget/stateful/sliverappbar_widget.dart';
 import 'package:flutter_demo/widget/stateless/CheckboxListTile.dart';
 import 'package:flutter_demo/widget/stateless/aboutdialog.dart';
+import 'package:flutter_demo/widget/stateless/cupertion.dart';
 import 'package:flutter_demo/widget/stateless/daypicker.dart';
 import 'package:flutter_demo/widget/stateless/dialog.dart';
 import 'package:flutter_demo/widget/stateless/aboutlisttile.dart';
@@ -18,14 +19,17 @@ import 'package:flutter_demo/widget/stateless/chip_widget.dart';
 import 'package:flutter_demo/widget/stateless/choicechip_widget.dart';
 import 'package:flutter_demo/widget/stateless/circleavatar_widget.dart';
 import 'package:flutter_demo/widget/stateless/container_widget.dart';
+import 'package:flutter_demo/widget/stateless/divider.dart';
 import 'package:flutter_demo/widget/stateless/filterchip.dart';
 import 'package:flutter_demo/widget/stateless/gesturedetector_widget.dart';
 import 'package:flutter_demo/widget/stateless/gridtile.dart';
 import 'package:flutter_demo/widget/stateless/gridview_widget.dart';
+import 'package:flutter_demo/widget/stateless/icon.dart';
 import 'package:flutter_demo/widget/stateless/inputchip_widget.dart';
 import 'package:flutter_demo/widget/stateless/listtile_widget.dart';
 import 'package:flutter_demo/widget/stateless/listview_widget.dart';
 import 'package:flutter_demo/widget/stateless/materialbanner.dart';
+import 'package:flutter_demo/widget/stateless/mypreferredsize.dart';
 import 'package:flutter_demo/widget/stateless/navigationtoolbar.dart';
 import 'package:flutter_demo/widget/stateless/pageview_widget.dart';
 import 'package:flutter_demo/widget/stateless/placeholder.dart';
@@ -78,6 +82,10 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/materialbanner': (context) => const MaterialBannerWidget(),
   '/navigationtoolbar': (context) => const NavigationToolbarWidget(),
   '/placeholder': (context) => const PlaceholderWidget(),
+  '/icon': (context) => const IconWidget(),
+  '/divider': (context) => const DividerWidget(),
+  '/cupertion': (context) => const CupertionWidget(),
+  '/mypreferredsize': (context) => const MyPreferredSizeWidget(),
 
   // 有状态组件导航
   '/image': (context) => const ImageWidget(),
