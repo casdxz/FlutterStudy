@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/bottom/index.dart';
 import 'package:flutter_demo/sample/plant_shop.dart';
 import 'package:flutter_demo/sample/timeline_page.dart';
+import 'package:flutter_demo/widget/stateful/animatedbuilder_widget.dart';
+import 'package:flutter_demo/widget/stateful/animatedcontainer_widget.dart';
+import 'package:flutter_demo/widget/stateful/animatedeffect_widget.dart';
+import 'package:flutter_demo/widget/stateful/animatedlist_widget.dart';
+import 'package:flutter_demo/widget/stateful/animatedswitcher_widget.dart';
 import 'package:flutter_demo/widget/stateful/image_widget.dart';
 import 'package:flutter_demo/widget/stateful/pageviewcontrol.dart';
 import 'package:flutter_demo/widget/stateful/sliverappbar_widget.dart';
@@ -90,6 +95,11 @@ Map<String, Widget Function(BuildContext)> routes = {
   // 有状态组件导航
   '/image': (context) => const ImageWidget(),
   '/sliverappbar': (context) => const SliverAppBarWidget(),
+  '/animatedcontainer': (context) => const AnimatedContainerWidget(),
+  '/animatedbuilder': (context) => const AnimatedBuilderWidget(),
+  '/animatedlist': (context) => const AnimatedListWidget(),
+  '/animatedswitcher': (context) => const AnimatedSwitcherWidget(),
+  '/animatedeffect': (context) => const AnimatedEffectWidget(),
   // 示例导航
   '/plant-shop': (context) => const PlantShop(),
   '/timeline': (context) => const TimelinePage(),
