@@ -95,5 +95,17 @@ final statefulList = <ContainerInfo>[
       'AnimatedSwitcherWidget', '当⼦组件变化时执⾏动画，需要指定⼦组件的key进⾏标识。动画⽅式可以⾃定义,能指定动画时⻓ 动画曲线等属性。', '/animatedswitcher'),
   ContainerInfo(
       'AnimatedEffectWidget', '能让⼦组件进⾏Opacity(透明度)动画，可指定时⻓和曲线，有动⾯结束事件。', '/animatedeffect'),
+  ContainerInfo(
+      'TransitionEffectWidget', '可容纳一个子组件，并使其进行旋转动画，需要提供动画器 turns , 拥有alignment 属性。', '/transitioneffect'),
+  ContainerInfo(
+      'MaterialWidget', 'Material风格组件的核心，可指定颜色、影深、类型、阴影颜色、形状等属性。', '/material'),
+  ContainerInfo(
+      'MaterialAppWidget', 'Material 应用的顶级组件，包含路由生成器、主题、语言、主页等属性。', '/materialapp'),
+  ContainerInfo(
+      'WillPopScopeWidget', '当一个界面中有 WillPopScope 组件时，在页面返回时会触发回调，决定是否返回。可用于二次确认退出的场景。', '/willpopscope'),
+  ContainerInfo(
+      'HeroWidget', '可指定标签名，两个界面跳转时具有相同标签的组件会进行共享动画。一个界面中不能存在两个同名的Hero标签。', '/hero'),
+  ContainerInfo(
+      'FutureBuildWidget', '可指定一个Future对象，能够监听异步执行的状态，并在构造器中根据状态构建不同的界面。', '/futurebuild'),
 
 ];
