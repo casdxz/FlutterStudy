@@ -42,7 +42,7 @@ class _SnackBarWidgetState extends State<SnackBarWidget> {
                         'SnackBar',
                         style: descStyle,
                       ),
-                      duration: const Duration(seconds: 2),a
+                      duration: const Duration(seconds: 2),
                       action: SnackBarAction(
                         label: 'ACTION',
                         onPressed: () {
