@@ -107,5 +107,19 @@ final statefulList = <ContainerInfo>[
       'HeroWidget', '可指定标签名，两个界面跳转时具有相同标签的组件会进行共享动画。一个界面中不能存在两个同名的Hero标签。', '/hero'),
   ContainerInfo(
       'FutureBuildWidget', '可指定一个Future对象，能够监听异步执行的状态，并在构造器中根据状态构建不同的界面。', '/futurebuild'),
+  ContainerInfo(
+      'OverlayWidget', 'Overlay是一个Stack的widget，可以将overlay entry插入到overlay中，使独立的child窗口悬浮于其他widget之上。', '/overlay'),
+  ContainerInfo(
+      'StepperWidget', '步骤条组件，可指定一步步的操作，可自定义步骤的内容，确认和返回的按钮以及步骤排列的方向。', '/stepper'),
+  ContainerInfo(
+      'CheckBoxRadioWidget', '复选组件、单选组件、切换组件。', '/checkboxradio'),
+  ContainerInfo(
+      'SliderWidget', '滑动组件，可以在指定的最大值和最小值之间拖动选择。可指定颜色、分段数及显示的标签，接收进度条变化回调。', '/slider'),
+  ContainerInfo(
+      'RangeSliderWidget', '范围滑动组件，支持在两点之间滑动，获取之间的范围。可指定颜色、分段数及显示的标签，接收进度条变化回调。', '/rangeslider'),
+  ContainerInfo(
+      'SnackBarWidget', '从底部弹出的消息条，可指定形状、影深、背景色等。', '/snackbar'),
+  ContainerInfo(
+      'RefreshIndicatorWidget', '下拉时会显示刷新图标，松手后可以执行指定的异步方法。可指定颜色、到顶端的距离等属性。', '/refreshindicator'),
 
 ];
