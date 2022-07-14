@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/widget/custom/new_widget.dart';
 import 'package:flutter_demo/widget/custom/widget_container.dart';
 
 final data = <dynamic>[
@@ -121,5 +122,55 @@ final statefulList = <ContainerInfo>[
       'SnackBarWidget', '从底部弹出的消息条，可指定形状、影深、背景色等。', '/snackbar'),
   ContainerInfo(
       'RefreshIndicatorWidget', '下拉时会显示刷新图标，松手后可以执行指定的异步方法。可指定颜色、到顶端的距离等属性。', '/refreshindicator'),
-
+  ContainerInfo(
+      'DraggableWidget','可以让组件在界面上任意拖拽，可存放在一个泛型T的数据。通常和DragTarget组合使用，来完成拖拽效果。', '/draggable'),
+  ContainerInfo(
+      'BottomSheetWidget', '可以从底部弹出的一个见到你的结构组件，可指定形状、影深、背景色、内部组件构造器等。', '/bottomsheet'),
+  ContainerInfo(
+      'ReorderableListViewWidget', '可进行长按排序的ListView，可指定滑动方向、是否反向、滑动控制器等属性。', '/reorderablelistview'),
+  ContainerInfo(
+      'ListWheelScrollViewWidget', '精妙的柱面滑动列表，可指定item高度、透视、挤压等属性，接收滑动时的选中时间。', '/listwheelscrollview'),
+  ContainerInfo(
+      'FormWidget', '表单组件，可以接收FormField组件的变化回调，通过onWillPop拦截页面返回，通过FormState对表单字段进行保存或校验。', '/form'),
+  ContainerInfo(
+      'TextFieldWidget', '输入框组件，可指定控制器、文字样式、装饰线、行数限制、游标样式等，可以接收输入变化、完成输入等事件。', '/textfield'),
+  ContainerInfo(
+      'ExpansionWidget', '折叠栏组件，展开图标，展开列表。', '/expansion'),
+  ContainerInfo(
+      'ValueListenableBuilderWidget', '监听值构造器，可以监听一个值，当期变化时通过builder回调能重建界面，避免使用 setState 刷新。', '/valuelistenablebuilder'),
+  ContainerInfo(
+      'ScaffoldWidget', '通用的App结构，包括上下左右中、浮动按钮、抽屉等部位，可放置不同的组件。', '/scaffold'),
+  ContainerInfo(
+      'InkWidget', '水波纹组件，用于绘制图像或其他装饰的Material组件。', '/ink'),
+  ContainerInfo(
+      'ProgressIndicatorWidget', '圆形进度组件、直线型进度组件。', '/progressindicator'),
+  ContainerInfo(
+      'SelectableTextWidget', '可选择的文字，可以选择、复制。可指定浮标的颜色、大小、文字样式、对齐方式等。', '/selectabletext'),
 ];
+
+// 单渲染组件列表
+final singleRenderList = <NewContainer>[
+  NewContainer(
+      'ClipWidget', '椭圆裁剪，可容纳一个子组件，并将其以宽高为⻓轴和短轴进行椭圆裁切', '/clip', Colors.blue),
+  NewContainer(
+      'BoxWidget', '装饰盒、定尺寸盒、适应盒、限制盒、约束盒、分率盒、比例盒、溢出盒、尺寸溢出盒、旋转盒、颜色盒。', '/box',
+      Colors.blue),
+  NewContainer(
+      'AlignPaddingWidget', '对齐组件、基线组件、边距组件', '/alignpadding', Colors.blue),
+  // ContainerInfo('CustomPaint', '绘制组件', '/custom_paint'),
+];
+
+// 多渲染
+final multiRenderList = <NewContainer>[];
+
+// 可折叠
+final sliverList = <NewContainer>[];
+
+// 可寄居
+final liveAwayList = <NewContainer>[];
+
+// 其他
+final otherList = <NewContainer>[];
+
+
+

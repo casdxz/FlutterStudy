@@ -1,27 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/bottom/index.dart';
+import 'package:flutter_demo/sample/demo_page.dart';
 import 'package:flutter_demo/sample/plant_shop.dart';
 import 'package:flutter_demo/sample/timeline_page.dart';
+import 'package:flutter_demo/widget/single/align_padding_widget.dart';
+import 'package:flutter_demo/widget/single/box_widget.dart';
+import 'package:flutter_demo/widget/single/clip_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedbuilder_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedcontainer_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedeffect_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedlist_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedswitcher_widget.dart';
+import 'package:flutter_demo/widget/stateful/bottomsheet_widget.dart';
 import 'package:flutter_demo/widget/stateful/checkboxradio_widget.dart';
+import 'package:flutter_demo/widget/stateful/draggable_widget.dart';
+import 'package:flutter_demo/widget/stateful/expansion_widget.dart';
+import 'package:flutter_demo/widget/stateful/form_widget.dart';
 import 'package:flutter_demo/widget/stateful/futurebuild_widget.dart';
 import 'package:flutter_demo/widget/stateful/hero_widget.dart';
 import 'package:flutter_demo/widget/stateful/image_widget.dart';
+import 'package:flutter_demo/widget/stateful/ink_widget.dart';
+import 'package:flutter_demo/widget/stateful/listwheelscrollview_widget.dart';
 import 'package:flutter_demo/widget/stateful/material_widget.dart';
 import 'package:flutter_demo/widget/stateful/materialapp_widget.dart';
 import 'package:flutter_demo/widget/stateful/overlay_widget.dart';
 import 'package:flutter_demo/widget/stateful/pageviewcontrol.dart';
+import 'package:flutter_demo/widget/stateful/progressindicator_widget.dart';
 import 'package:flutter_demo/widget/stateful/rangeslider_widget.dart';
 import 'package:flutter_demo/widget/stateful/refreshindicator_widget.dart';
+import 'package:flutter_demo/widget/stateful/reorderablelistview_widget.dart';
+import 'package:flutter_demo/widget/stateful/scaffold_widget.dart';
+import 'package:flutter_demo/widget/stateful/selectabletext_widget.dart';
 import 'package:flutter_demo/widget/stateful/slider_widget.dart';
 import 'package:flutter_demo/widget/stateful/sliverappbar_widget.dart';
 import 'package:flutter_demo/widget/stateful/snackbar_widget.dart';
 import 'package:flutter_demo/widget/stateful/stepper_widget.dart';
+import 'package:flutter_demo/widget/stateful/textfield_widget.dart';
 import 'package:flutter_demo/widget/stateful/transitioneffect_widget.dart';
+import 'package:flutter_demo/widget/stateful/valuelistenablebuilder_widget.dart';
 import 'package:flutter_demo/widget/stateful/willpopscope_widget.dart';
 import 'package:flutter_demo/widget/stateless/CheckboxListTile.dart';
 import 'package:flutter_demo/widget/stateless/aboutdialog.dart';
@@ -126,7 +142,26 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/rangeslider': (context) => const RangeSliderWidget(),
   '/snackbar': (context) => const SnackBarWidget(),
   '/refreshindicator': (context) => const RefreshIndicatorWidget(),
+  '/draggable': (context) => const DraggableWidget(),
+  '/bottomsheet': (context) => const BottomSheetWidget(),
+  '/reorderablelistview': (context) => const ReorderableListViewWidget(),
+  '/listwheelscrollview': (context) => const ListWheelScrollViewWidget(),
+  '/form': (context) => const FormWidget(),
+  '/textfield': (context) => const TextFieldWidget(),
+  '/expansion': (context) => const ExpansionWidget(),
+  '/valuelistenablebuilder': (context) => const ValueListenableBuilderWidget(),
+  '/scaffold': (context) => const ScaffoldWidget(),
+  '/ink': (context) => const InkWidget(),
+  '/progressindicator': (context) => const ProgressIndicatorWidget(),
+  '/selectabletext': (context) => const SelectableTextWidget(),
+
+  //组件导航
+  '/clip': (context) => const ClipWidget(),
+  '/box': (context) => const BoxWidget(),
+  '/alignpadding': (context) => const AlignPaddingWidget(),
+
   // 示例导航
+  '/demo-page': (context) => const DemoPae(),
   '/plant-shop': (context) => const PlantShop(),
   '/timeline': (context) => const TimelinePage(),
 };

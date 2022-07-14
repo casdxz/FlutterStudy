@@ -40,6 +40,7 @@ class _IndexState extends State<Index> {
           children:  const [
             HomePage(),
             CategoryPage(),
+            FavoritePage(),
             SamplePage(),
           ],
         ),
