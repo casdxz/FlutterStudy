@@ -158,6 +158,12 @@ final singleRenderList = <NewContainer>[
   NewContainer(
       'AlignPaddingWidget', '对齐组件、基线组件、边距组件', '/alignpadding', Colors.blue),
   // ContainerInfo('CustomPaint', '绘制组件', '/custom_paint'),
+  NewContainer(
+      'CustomPaintWidget', '对齐组件、基线组件、边距组件', '/custompaint', Colors.blue),
+  // ContainerInfo('CustomPaint', '绘制组件', '/custom_paint'),
+  NewContainer(
+      'ColorFilteredWidget', '对齐组件、基线组件、边距组件', '/colorfiltered', Colors.blue),
+  // ContainerInfo('CustomPaint', '绘制组件', '/custom_paint'),
 ];
 
 // 多渲染

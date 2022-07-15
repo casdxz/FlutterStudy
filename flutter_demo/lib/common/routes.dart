@@ -6,6 +6,8 @@ import 'package:flutter_demo/sample/timeline_page.dart';
 import 'package:flutter_demo/widget/single/align_padding_widget.dart';
 import 'package:flutter_demo/widget/single/box_widget.dart';
 import 'package:flutter_demo/widget/single/clip_widget.dart';
+import 'package:flutter_demo/widget/single/color_filtered_widget.dart';
+import 'package:flutter_demo/widget/single/custom_paint_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedbuilder_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedcontainer_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedeffect_widget.dart';
@@ -159,7 +161,8 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/clip': (context) => const ClipWidget(),
   '/box': (context) => const BoxWidget(),
   '/alignpadding': (context) => const AlignPaddingWidget(),
-
+  '/custompaint': (context) => const CustomPaintWidget(),
+  '/colorfiltered': (context) => const ColorFilteredWidget(),
   // 示例导航
   '/demo-page': (context) => const DemoPae(),
   '/plant-shop': (context) => const PlantShop(),
