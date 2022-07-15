@@ -156,14 +156,18 @@ final singleRenderList = <NewContainer>[
       'BoxWidget', '装饰盒、定尺寸盒、适应盒、限制盒、约束盒、分率盒、比例盒、溢出盒、尺寸溢出盒、旋转盒、颜色盒。', '/box',
       Colors.blue),
   NewContainer(
-      'AlignPaddingWidget', '对齐组件、基线组件、边距组件', '/alignpadding', Colors.blue),
-  // ContainerInfo('CustomPaint', '绘制组件', '/custom_paint'),
+      'AlignPaddingWidget', '可容纳一个子组件，可以通过alignment让子组件定位在父组件宽高的任何指定分率。', '/alignpadding', Colors.blue),
   NewContainer(
       'CustomPaintWidget', '对齐组件、基线组件、边距组件', '/custompaint', Colors.blue),
   // ContainerInfo('CustomPaint', '绘制组件', '/custom_paint'),
   NewContainer(
-      'ColorFilteredWidget', '对齐组件、基线组件、边距组件', '/colorfiltered', Colors.blue),
-  // ContainerInfo('CustomPaint', '绘制组件', '/custom_paint'),
+      'ColorFilteredWidget', '可容纳一个子组件，并将组件按照29种叠色模式和任意组件混合，非常强大。', '/colorfiltered', Colors.blue),
+  NewContainer(
+      'LayoutBuilderWidget', '可以检测到父容器的区域大小，并根据父容器的尺寸信息完成定义布局，是一个非常使用的组件。', '/layoutbuilder', Colors.blue),
+  NewContainer(
+      'OffstageWidget', '可容纳一个子组件，可更改其消失与否。offstage属性为true表示隐藏。', '/offstage', Colors.blue),
+  NewContainer(
+      'OpacityWidget', '可容纳一个子组件，将其透明度变为opacity值，取值在0-1之间。', '/opacity', Colors.blue),
 ];
 
 // 多渲染
