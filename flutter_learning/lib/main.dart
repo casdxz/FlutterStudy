@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/pages/profile_four_page.dart';
 import 'package:flutter_learning/pages/profile_three_page.dart';
 import 'package:flutter_learning/pages/profile_two_page.dart';
 import 'package:flutter_learning/pages/profile_one_page.dart';
@@ -11,7 +12,8 @@ void main() {
       home:
         // ProfileOnePage(),
         // ProfileTwoPage(),
-        ProfileThreePage(),
+        // ProfileThreePage(),
+        ProfileFourPage(),
     )
   );
 }
