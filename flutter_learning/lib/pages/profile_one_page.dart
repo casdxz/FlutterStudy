@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 TextStyle _titleStyle = TextStyle(color: Colors.deepOrange, fontSize: 15.0);
