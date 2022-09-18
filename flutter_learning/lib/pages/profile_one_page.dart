@@ -163,7 +163,6 @@ class ProfileOnePage extends StatelessWidget {
 class Info {
   String title;
   String subTitle;
-
   Info(this.title, this.subTitle);
 }
 
