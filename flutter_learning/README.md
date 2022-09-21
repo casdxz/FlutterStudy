@@ -1583,3 +1583,175 @@ class _LoginOnePageState extends State<LoginOnePage> {
 
 ![LoginOne](https://bearcad.oss-cn-shanghai.aliyuncs.com/Code/LoginOne.png)
 
+
+
+### 八、eightDay
+
+##### (一)、分析
+
+​		顶部那个大大的圆弧，其实就是把圆角设置得超级大（300），并且指定圆角只是右下角一个方向；
+​		使用Stack+Pisitioned来对点缀元素绝对定位；
+
+##### (二)、代码
+
+```dart
+import 'package:flutter/material.dart';
+
+class LoginTwoPage extends StatelessWidget {
+  const LoginTwoPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            // 左上角半圆背景
+            Container(
+              height: 360,
+              foregroundDecoration: BoxDecoration(
+                color: Colors.black.withOpacity(0.15),
+                borderRadius: const BorderRadius.only(
+                  bottomRight: Radius.circular(300),
+                ),
+              ),
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(300) // 角度和半径，显示了大院的一部分作为左上角装饰
+                ),
+                image: DecorationImage(
+                  image: NetworkImage(
+                    'https://bearcad.oss-cn-shanghai.aliyuncs.com/banner/banner3.jpg',
+                  ),
+                  fit: BoxFit.fill
+                ),
+              ),
+              // 使用Stack和绝对定位装饰图片和 SING IN 文字
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                    top: 70,
+                    right: 50,
+                    width: 100,
+                    height: 150,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage(
+                            'https://bearcad.oss-cn-shanghai.aliyuncs.com/float_element/float-8.png'
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    child: Container(
+                      margin: const EdgeInsets.only(top: 60, right: 120),
+                      child: Center(
+                        child: Text(
+                          "SING IN",
+                          style: TextStyle(
+                            color: Colors.indigo.shade300,
+                            fontSize: 36,
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(30),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    // Email 和 Password外层容器的装饰效果
+                    padding: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color.fromRGBO(143, 148, 251, 0.4),
+                          blurRadius: 20,
+                          offset: Offset(5, 10),
+                        ),
+                      ]
+                    ),
+                    child: Column(
+                      children: <Widget>[
+                        // 输入框Container包裹，设置边框效果
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(color: Colors.grey.shade200),
+                            ),
+                          ),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Email",
+                              hintStyle: TextStyle(color: Colors.grey.shade400),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Password",
+                              hintStyle: TextStyle(color: Colors.grey.shade400),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 50),
+                  Container(
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.indigo.shade100,
+                          Colors.indigo.shade300,
+                        ],
+                      ),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        "SING IN",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 50),
+                  Text(
+                    "Forgot Password ?",
+                    style: TextStyle(
+                      color: Colors.indigo.shade200
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+##### (三)、示例图
+
+![LoginTwo](https://bearcad.oss-cn-shanghai.aliyuncs.com/Code/LoginTwo.png)
