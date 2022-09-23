@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/pages/landing_one_page.dart';
 import 'package:flutter_learning/pages/login_one_page.dart';
 import 'package:flutter_learning/pages/login_two_page.dart';
 import 'package:flutter_learning/pages/profile_four_page.dart';
@@ -21,7 +22,8 @@ void main() {
         // TodoHomeOnePage(),
         // TodoHomeTwoPage(),
         // LoginOnePage(),
-        LoginTwoPage(),
+        // LoginTwoPage(),
+        LandingOnePage()
     )
   );
 }
