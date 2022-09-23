@@ -12,7 +12,8 @@ void main() {
         home:
         // LayoutPage(),
         // AppStorePage(),
-        PainterPage()
+        // PainterPage(),
+        EventPage()
       )
   );
 }
