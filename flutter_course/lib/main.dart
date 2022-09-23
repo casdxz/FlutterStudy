@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course/animation/animation_page.dart';
 import 'package:flutter_course/pages/app_store_page.dart';
 import 'package:flutter_course/pages/event_page.dart';
 import 'package:flutter_course/pages/layout_page.dart';
@@ -13,7 +14,8 @@ void main() {
         // LayoutPage(),
         // AppStorePage(),
         // PainterPage(),
-        EventPage()
+        // EventPage(),
+        AnimationPage(),
       )
   );
 }
