@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/pages/dashboard_one_page.dart';
 import 'package:flutter_learning/pages/landing_one_page.dart';
 import 'package:flutter_learning/pages/login_one_page.dart';
 import 'package:flutter_learning/pages/login_two_page.dart';
@@ -23,7 +24,8 @@ void main() {
         // TodoHomeTwoPage(),
         // LoginOnePage(),
         // LoginTwoPage(),
-        LandingOnePage()
+        // LandingOnePage()
+        DashboardOnePage()
     )
   );
 }
